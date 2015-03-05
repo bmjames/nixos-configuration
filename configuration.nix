@@ -37,6 +37,7 @@
     chromium
     emacs
     ack
+    git
     vim
     wget
 
