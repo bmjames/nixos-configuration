@@ -48,6 +48,7 @@
     haskellPackages.ghc
     haskellPackages.ghcMod
     haskellPackages.happy
+    haskellPackages.hasktags
     haskellPackages.hlint
   ];
 
