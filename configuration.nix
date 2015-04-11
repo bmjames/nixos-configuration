@@ -4,6 +4,17 @@
 
 { config, pkgs, ... }:
 
+let
+  hsPackages = with pkgs.haskellngPackages; [
+    alex
+    cabal2nix
+    cabal-install
+    ghc
+    happy
+    hasktags
+    hlint
+  ];
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -40,17 +51,7 @@
     git
     vim
     wget
-
-    # haskell stuff
-    haskellPackages.alex
-    haskellPackages.cabal2nix
-    haskellPackages.cabalInstall
-    haskellPackages.ghc
-    haskellPackages.ghcMod
-    haskellPackages.happy
-    haskellPackages.hasktags
-    haskellPackages.hlint
-  ];
+  ] ++ hsPackages;
 
   programs.zsh.enable = true;
 
