@@ -51,6 +51,7 @@ in
     git
     vim
     wget
+    unzip
   ] ++ hsPackages;
 
   programs.zsh.enable = true;
