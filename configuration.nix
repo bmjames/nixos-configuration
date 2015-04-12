@@ -49,6 +49,7 @@ in
     emacs
     ack
     git
+    man
     vim
     wget
     unzip
