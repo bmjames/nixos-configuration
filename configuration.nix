@@ -13,6 +13,7 @@ let
     happy
     hasktags
     hlint
+    structured-haskell-mode
   ];
 in
 {
