@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 let
-  hsPackages = with pkgs.haskell.packages.ghc7101; [
+  hsPackages = with pkgs.haskell.packages.ghc7102; [
     alex
     cabal2nix
     cabal-install
