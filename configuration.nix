@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 let
-  hsPackages = with pkgs.haskellngPackages; [
+  hsPackages = with pkgs.haskell.packages.ghc7101; [
     alex
     cabal2nix
     cabal-install
@@ -13,7 +13,10 @@ let
     happy
     hasktags
     hlint
-    structured-haskell-mode
+  ];
+  emacsPackages = with pkgs.emacs24Packages; [
+    haskellMode
+    magit
   ];
 in
 {
@@ -54,7 +57,7 @@ in
     vim
     wget
     unzip
-  ] ++ hsPackages;
+  ] ++ hsPackages ++ emacsPackages;
 
   programs.zsh.enable = true;
 
