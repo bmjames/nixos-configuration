@@ -7,7 +7,7 @@
 let
   hsPackages = with pkgs.haskell.packages.ghc7102; [
     alex
-    cabal2nix
+    # cabal2nix
     cabal-install
     ghc
     happy
@@ -16,7 +16,6 @@ let
   ];
   emacsPackages = with pkgs.emacs24Packages; [
     haskellMode
-    magit
   ];
 in
 {
@@ -62,8 +61,6 @@ in
   programs.zsh.enable = true;
 
   # List services that you want to enable:
-
-  services.virtualboxGuest.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
