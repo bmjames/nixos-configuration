@@ -17,6 +17,11 @@ let
   emacsPackages = with pkgs.emacs24Packages; [
     haskellMode
   ];
+  javaPackages = with pkgs; [
+    jdk
+    scala
+    sbt
+  ];
 in
 {
   imports =
@@ -56,7 +61,7 @@ in
     vim
     wget
     unzip
-  ] ++ hsPackages ++ emacsPackages;
+  ] ++ hsPackages ++ emacsPackages ++ javaPackages;
 
   programs.zsh.enable = true;
 
