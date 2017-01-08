@@ -57,6 +57,7 @@ in
     emacs
     ack
     git
+    gparted
     man
     vim
     wget
