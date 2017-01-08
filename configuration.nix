@@ -5,16 +5,16 @@
 { config, pkgs, ... }:
 
 let
-  hsPackages = with pkgs.haskell.packages.ghc7102; [
+  hsPackages = with pkgs.haskellPackages; [
     alex
-    # cabal2nix
     cabal-install
     ghc
     happy
     hasktags
     hlint
+    stack
   ];
-  emacsPackages = with pkgs.emacs24Packages; [
+  emacsPackages = with pkgs.emacsPackages; [
     haskellMode
   ];
   javaPackages = with pkgs; [
