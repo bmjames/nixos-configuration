@@ -93,6 +93,7 @@ in
     isNormalUser = true;
     uid = 1000;
     extraGroups = [ "wheel" ];
+    shell = "/run/current-system/sw/bin/zsh";
   };
 
 }
